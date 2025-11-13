@@ -1,30 +1,40 @@
 import { useCallback, useEffect } from "react";
 import { useAppDispatch,useAppSelector } from "@store/hooks";
-import { actGetProductsByItems,cartItemChangeQuantity,cartItemRemove,cleanCartproductsFullInfo } from "@store/carts/cartsSlice";
+import { actGetProductsByItems, cartItemChangeQuantity, cartItemRemove, cleanCartproductsFullInfo } from "@store/carts/cartsSlice";
+import { resetOrderStatus } from "@store/orders/ordersSlice";
 
 const useCart = () => {
       const dispatch= useAppDispatch()
   const {items,productsFullInfo,loading,error}=useAppSelector((state)=>state.cart);
+
+  const userAccessToken = useAppSelector((state)=>state.auth.accessToken);
   
-  
-  useEffect (()=>{const promise =dispatch(actGetProductsByItems())
-    return ()=>{
-      dispatch(cleanCartproductsFullInfo())
-      promise.abort();
-    }
-  },[dispatch] )
+  const placeOrderStatus = useAppSelector(state=>state.orders.loading)
 
   const products =productsFullInfo.map((el)=>({...el,quantity:items[el.id]}));
 
   const changeQuantityHandler = useCallback((id:number,quantity:number)=>{
     dispatch(cartItemChangeQuantity({id,quantity}));
     
-  },[dispatch]);
+  }, [dispatch]);
+  
 
   const removeItemHandler = useCallback((id:number)=>{
     dispatch(cartItemRemove(id))
-  },[dispatch])
-  return {products,changeQuantityHandler,removeItemHandler,loading,error}
+  }, [dispatch])
+
+  
+  useEffect (()=>{const promise =dispatch(actGetProductsByItems())
+    return () => {
+      promise.abort();
+      dispatch(cleanCartproductsFullInfo())
+      dispatch(resetOrderStatus())
+    }
+  }, [dispatch])
+  
+
+  return { products, changeQuantityHandler, removeItemHandler, userAccessToken, placeOrderStatus, loading, error }
+  
 }
 
 export default useCart

@@ -39,7 +39,11 @@ const cartsSlice =createSlice({
          cartItemRemove:(state,action)=>{
             delete state.items[action.payload];
             state.productsFullInfo = state.productsFullInfo.filter(el=> el.id !== action.payload);
-         }
+         },
+         clearCartAfterPlaceOrder:(state)=>{
+            state.items= {};
+            state.productsFullInfo=[];
+         }  
     },
     extraReducers: (builder) => {
         builder.addCase(actGetProductsByItems.pending,(state)=>{
@@ -62,5 +66,5 @@ const cartsSlice =createSlice({
 
 export{actGetProductsByItems};
 
-export const {addToCart,cartItemChangeQuantity,cartItemRemove,cleanCartproductsFullInfo}= cartsSlice.actions;
+export const {addToCart,cartItemChangeQuantity,cartItemRemove,cleanCartproductsFullInfo,clearCartAfterPlaceOrder}= cartsSlice.actions;
 export default cartsSlice.reducer;

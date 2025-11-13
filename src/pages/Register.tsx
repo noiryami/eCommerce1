@@ -21,6 +21,7 @@ const Register = () => {
         <Input label="Last name" name="lastName" register={register} error={formErrors.lastName?.message}  />
         <Input label="Email address" name="email" register={register} 
         error={formErrors.email?.message ? formErrors.email?.message : emailAvailabilityStatus==="notAvailable"?"This email is already in use":emailAvailabilityStatus==="failed"?"Error from the server":""} 
+        
         disabled={emailAvailabilityStatus==="checking"?true:false} onBlur={emailOnBlurHandler} 
         formText={emailAvailabilityStatus=== "checking"?"We are currently checking your email.Please wait" :" "}
         success={emailAvailabilityStatus==="available"?"This email is availabile to use.":""} />
