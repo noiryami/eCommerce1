@@ -131,17 +131,7 @@
     {
       "userId": "1",
       "productId": 1,
-      "id": 1
-    },
-    {
-      "userId": "1",
-      "productId": 1,
       "id": 2
-    },
-    {
-      "userId": "1",
-      "productId": 4,
-      "id": 3
     },
     {
       "userId": 4,
@@ -152,6 +142,62 @@
       "userId": 4,
       "productId": 2,
       "id": 5
+    },
+    {
+      "userId": 2,
+      "productId": 1,
+      "id": 6
+    }
+  ],
+  "orders": [
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 1,
+          "title": "Regular Fit Jersey top",
+          "price": 249,
+          "img": "https://tse3.mm.bing.net/th/id/OIP.-IFrYBEaHLeVt_yLKPgPdwHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+          "quantity": 1
+        }
+      ],
+      "subTotal": 249,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 1,
+          "title": "Regular Fit Jersey top",
+          "price": 249,
+          "img": "https://tse3.mm.bing.net/th/id/OIP.-IFrYBEaHLeVt_yLKPgPdwHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+          "quantity": 1
+        }
+      ],
+      "subTotal": 249,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 1,
+          "title": "Regular Fit Jersey top",
+          "price": 249,
+          "img": "https://tse3.mm.bing.net/th/id/OIP.-IFrYBEaHLeVt_yLKPgPdwHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "title": "Regular Fit Jersey top",
+          "price": 229,
+          "img": "https://tse1.mm.bing.net/th/id/OIP.z_d8XI0qbLca6_kChDsA4QHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+          "quantity": 1
+        }
+      ],
+      "subTotal": 478,
+      "id": 3
     }
   ]
 }

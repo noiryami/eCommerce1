@@ -1,3 +1,4 @@
 import axios from "axios";
 
-axios.defaults.baseURL="http://localhost:5005"
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5005";
+axios.defaults.baseURL = API_URL;
