@@ -1,0 +1,10 @@
+# Don't ignore api and db.json for Vercel
+!api
+!api/**
+
+# Ignore unnecessary files
+node_modules
+.git
+.gitignore
+.env.local
+.env.*.local
