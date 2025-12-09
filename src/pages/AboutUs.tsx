@@ -1,10 +1,18 @@
+import { GridList, Heading } from "@components/common";
+import { Loading } from "@components/feedback";
+
+
 
 const AboutUs = () => {
-  return (
-    <div>
-      AboutUs
-    </div>
-  )
-}
 
-export default AboutUs
+
+
+
+  return (
+    <>
+
+    </>
+  );
+};
+
+export default AboutUs;

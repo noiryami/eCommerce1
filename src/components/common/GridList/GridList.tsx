@@ -11,7 +11,7 @@ type HasId = {id?:number};
 
 const GridList = <T extends HasId >({records,renderIteam,emptyMessage}:GridlistProps <T>) => {
 const categoriesList = records.length > 0 ? records.map((record) =>
-        <Col xs={6} md={3} key={record.id} className="d-flex justify-content-center mb-5 mt-2">
+        <Col xs={9} md={3} key={record.id} className="d-flex justify-content-center mb-5 mt-2">
           {renderIteam(record)}
         </Col>
   ) : <LottieHandler type="empty" message={emptyMessage}/>;

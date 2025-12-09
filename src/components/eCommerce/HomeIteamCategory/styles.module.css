@@ -1,0 +1,27 @@
+.homeIteam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    
+}
+
+.HomeIteamImg{
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f2f2f2;
+}
+.HomeIteamImg img {
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+.homeIteam  a{
+    text-decoration: none;
+    color: black;
+}
+.homeIteam a:hover{
+    text-decoration: underline ;
+}

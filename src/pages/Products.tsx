@@ -14,7 +14,6 @@ const Products = () => {
                 <GridList emptyMessage="there is no products"
                 records={productFullInfo} renderIteam={(record)=> <Product {...record} /> } />
       </Loading>
-
     </>
   );
 };
