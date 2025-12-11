@@ -11,7 +11,7 @@ const randomProudcts = useMemo(() => {
   if (productFullInfo.length === 0) return [];
 
   const shuffled = [...productFullInfo].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, Math.min(3, shuffled.length)); // Show max 8 random categories
+  return shuffled.slice(0, Math.min(5, shuffled.length));
 }, [productFullInfo]);
     
 

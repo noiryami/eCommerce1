@@ -30,7 +30,7 @@
   width: 130px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
 }
 .product-row h2 {

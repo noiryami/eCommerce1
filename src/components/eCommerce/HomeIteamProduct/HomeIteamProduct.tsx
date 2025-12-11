@@ -71,7 +71,7 @@ const HomeIteamProduct = memo(
             You need to login first to add this item to your wishlist{" "}
           </Modal.Body>
         </Modal>
-        <ProductInfo title={title} img={img} price={price} direction="row" >
+        <ProductInfo title={title} img={img} price={price} direction="row" style={{marginRight:"auto",marginLeft:"auto"}} >
           <div className={wishlistBtn} onClick={likeToggleHandler}>
             {isLoading ? (
               <Spinner animation="border" size="sm" variant="primary" />
