@@ -1,9 +1,9 @@
 
 import { Heading, HomeGridList } from "@components/common";
 import { HomeIteamCategory } from "@components/eCommerce";
-import useHomeCategories from "@hooks/useHomeCategories";
+// import useHomeCategories from "@hooks/useHomeCategories";
 import { HomeIteamProduct } from "@components/eCommerce";
-import useHomeProducts from "@hooks/useHomeProducts";
+// import useHomeProducts from "@hooks/useHomeProducts";
 
 const catogories = [
   {
@@ -64,28 +64,28 @@ const proudcts = [
 
 const Home = () => {
 
-  const { randomCategories } = useHomeCategories();
-  const { randomProudcts } = useHomeProducts();
+  // const { randomCategories } = useHomeCategories();
+  // const { randomProudcts } = useHomeProducts();
   
   return (
     <>
       <Heading title="Home" />
-      <HomeGridList
-        records={randomCategories}
-        renderIteam={(category) => <HomeIteamCategory {...category} />}
-        emptyMessage="No categories available"
-      />
+        {/* <HomeGridList
+          records={randomCategories}
+          renderIteam={(category) => <HomeIteamCategory {...category} />}
+          emptyMessage="No categories available"
+        /> */}
       <HomeGridList
         records={catogories}
         renderIteam={(category) => <HomeIteamCategory {...category} />}
         emptyMessage="No categories available"
       />
       <Heading title="Products" />
-      <HomeGridList
+      {/* <HomeGridList
         emptyMessage="there is no products"
         records={randomProudcts}
         renderIteam={(record) => <HomeIteamProduct {...record} />}
-      />
+      /> */}
       <HomeGridList
         records={proudcts}
         renderIteam={(record) => <HomeIteamProduct {...record} />}

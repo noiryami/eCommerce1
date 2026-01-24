@@ -1,7 +1,7 @@
-import useProducts from "@hooks/useProducts";
+
 import { GridList, Heading } from "@components/common";
 import { Product } from "@components/eCommerce";
-import { Loading } from "@components/feedback";
+
 
 const BooksProducts = [
   {
@@ -33,17 +33,15 @@ const BooksProducts = [
 
 
 const BooksProudcts = () => {
-    const { loading, error } = useProducts();
   return (
     <>
       <Heading title={`Books Products`} />
-      <Loading status={loading} error={error} type="product">
+
         <GridList
           emptyMessage="there is no products"
           records={BooksProducts}
           renderIteam={(record) => <Product {...record} />}
         />
-      </Loading>
     </>
   );
 };

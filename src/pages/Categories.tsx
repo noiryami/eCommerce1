@@ -1,7 +1,7 @@
-import useCategories from "@hooks/useCategories"
+// import useCategories from "@hooks/useCategories"
 import { GridList, Heading } from "@components/common"
 import { Category } from "@components/eCommerce"
-import { Loading } from "@components/feedback"
+// import { Loading } from "@components/feedback"
 
 const catogories = [
   {
@@ -25,17 +25,17 @@ const catogories = [
 ];
 
 const Categories = () => {
-  const {loading,error,records}=useCategories();
+  // const {loading,error,records}=useCategories();
 
   return (
   <>
     <Heading title="Categories"/>   
-    <Loading  status={loading} error={error} type="category">
-      <GridList emptyMessage="there is no categories"
-          records={records} renderIteam={(record) => <Category {...record} />} />
+    {/* <Loading  status={loading} error={error} type="category"> */}
+      {/* <GridList emptyMessage="there is no categories"
+          records={records} renderIteam={(record) => <Category {...record} />} /> */}
       <GridList emptyMessage="there is no categories"
           records={catogories} renderIteam={(record) => <Category {...record} />} />
-    </Loading>
+    {/* </Loading> */}
        
   </>    
       
