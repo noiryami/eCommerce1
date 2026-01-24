@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import style from "./HomeGridList.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
+const { mySwiper } = style;
 
 type GridlistProps<T> = {
   records: T[];
@@ -40,7 +42,7 @@ const HomeGridList = <T extends HasId>({
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className={mySwiper}
         >
           {records.map((el) => (
             <SwiperSlide key={el.id}>{renderIteam(el)}</SwiperSlide>
@@ -54,7 +56,7 @@ const HomeGridList = <T extends HasId>({
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className={mySwiper}
         >
           {records.map((el) => (
             <SwiperSlide key={el.id}>{renderIteam(el)}</SwiperSlide>
