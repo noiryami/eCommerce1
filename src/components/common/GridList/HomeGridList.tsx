@@ -1,7 +1,8 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-
+import "swiper/css";
+import "swiper/css/pagination";
 
 type GridlistProps<T> = {
   records: T[];
@@ -13,22 +14,20 @@ type HasId = { id?: number };
 
 const HomeGridList = <T extends HasId>({
   records,
-  renderIteam
+  renderIteam,
 }: GridlistProps<T>) => {
-    const [width, setWidth] = useState(window.outerWidth);
-    const breakpoint = 600  ;
+  const [width, setWidth] = useState(window.outerWidth);
+  const breakpoint = 600;
 
-    useEffect(() => {
-      const handleResize = () => setWidth(window.outerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.outerWidth);
 
-      window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
 
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []); 
-    
-
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>

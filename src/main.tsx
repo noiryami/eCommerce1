@@ -11,9 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 //axios
 import "./services/axios-global";
 //styles
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/global.css"
